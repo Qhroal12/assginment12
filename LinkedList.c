@@ -83,11 +83,13 @@ LinkedList* deleteAtLinkedList(LinkedList* li, int at) {
 			PointType* fPtr = li->head;
 			li->head = fPtr->next;
 			free(fPtr);
+			li->size--;
 		}
 		else {
 			PointType* fPtr = nPtr->next;
 			nPtr->next = fPtr->next;
 			free(fPtr);
+			li->size--;
 		}
 	}
 }
